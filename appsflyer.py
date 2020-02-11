@@ -1,4 +1,5 @@
 import logging
+
 import requests
 import json
 from datetime import datetime
@@ -8,13 +9,17 @@ from datetime import datetime
 
 
 class EventValue:
+    """
+    Represents eventValue.
+    Automatically casts all values to strings and dumps everything as stringified json.
+    """
 
     def __init__(self, revenue, content_type, content_id, quantity=None):
 
         self.revenue = revenue
         self.content_type = content_type
         self.content_id = content_id
-        self.quantity = quantity    # seems like it;s optional, docs don't specify
+        self.quantity = quantity    # seems like it's optional, docs don't specify
 
     def as_dict(self):
 
@@ -108,6 +113,9 @@ class AppsFlyerEventApiClient:
             if isinstance(event_value, dict):
                 # stringify as docs say
                 payload["eventValue"] = json.dumps(event_value)
+
+            if isinstance(event_value, EventValue):
+                payload["eventValue"] = EventValue.render()
 
             #         "eventValue":
             # 	"{
