@@ -17,6 +17,7 @@ import appsflyer
 from datetime import datetime
 
 client = AppsFlyerEventApiClient(application_id="id1389752090", developer_key="insert_developer_key")
+
 client.track(
   appsflyer_id="1415211453000-6513894", 
   event_name="af_purchase", 
@@ -25,6 +26,7 @@ client.track(
   event_currency="USD",
   eventTime=datetime.datetime(2020, 3, 10, 18, 54, 14),
   device_ip="198.51.100.5"
+)
 ```
 
 ## TODO
