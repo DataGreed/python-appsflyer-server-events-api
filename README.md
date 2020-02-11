@@ -12,7 +12,7 @@ This projects aim to simplify interaction with this API and lessen the chances o
 
 Example usage:
 
-```
+```python
 import appsflyer
 from datetime import datetime
 
