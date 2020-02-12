@@ -6,7 +6,7 @@ Python client implementation for [AppsFlyer Server-to-server events API](https:/
 
 Let's be honest, AppsFlyer server-to-server event API is a [horrible mess of bad design decisions](https://medium.com/@DataGreed/bad-api-design-studying-confusing-appsflyer-server-to-server-api-3c0a2af0b991).
 
-This projects aim to simplify interaction with this API and lessen the chances of shooting yourself in the foot. 
+This projects aims to simplify interaction with this API and lessen the chances of shooting yourself in the foot. 
 
 ## Usage
 
